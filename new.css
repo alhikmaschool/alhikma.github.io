@@ -225,12 +225,12 @@ html {
 
 
 @keyframes parallax2 {
-  0%   { background-image:url("img/nursery.jpg");}
-  20%   { background-image:url("img/nursery.jpg");}
-  40%   { background-image:url("img/nursery.jpg");}
-  60% {background-image:url("img/nursery.jpg");}
-  80% {background-image:url("img/nursery.jpg");}
-  100% {background-image:url("img/nursery.jpg");}
+  0%   { background-image:url("img/girls.jpg");}
+  20%   { background-image:url("img/girls.jpg");}
+  40%   { background-image:url("img/girls2.jpg");}
+  60% {background-image:url("img/girls2.jpg");}
+  80% {background-image:url("img/girls3.jpg");}
+  100% {background-image:url("img/girls3.jpg");}
 }
 
 
@@ -255,12 +255,12 @@ html {
 }
 
 @keyframes parallax3 {
-   0%   {background-image:url("img/nursery.jpg");}
-  20%   { background-image:url("img/nursery.jpg");}
-  40%   { background-image:url("img/nursery.jpg");}
-  60% {background-image:url("img/nursery.jpg");}
-  80% {background-image:url("img/nursery.jpg");}
-  100% {background-image:url("img/nursery.jpg");}
+   0%   {background-image:url("img/boys.jpg");}
+  20%   { background-image:url("img/boys.jpg");}
+  40%   { background-image:url("img/boys2.jpg");}
+  60% {background-image:url("img/boys2.jpg");}
+  80% {background-image:url("img/boys3.jpg");}
+  100% {background-image:url("img/boys3.jpg");}
 }
 
 
