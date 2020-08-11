@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AL-HIKMA SCHOOLS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+ <link href='https://fonts.googleapis.com/css?family=Black Han Sans' rel='stylesheet'>
+ <link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet'>
+
+<link rel="stylesheet" type="text/css" href="new.css"/>
+
+
+
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+</head>
+
+<style>
+
+td:hover{cursor:pointer;}
+
+
+*,html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,label,fieldset,input,p,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+}
+
+ /* Make the carousel image fully responsive */
+  .carousel-inner {
+      width: 100%;
+      height: 500px;
+  }
+  
+  
+  .carousel-caption h3{font-family: 'Francois One', Helvetica, Arial, sans-serif;font-size:35px;font-weight:bolder;background-color:rgb(0,0,0,0.8);display:inline-block;padding:5px;}	
+ 
+ .carousel-caption p{font-family: 'Francois One', Helvetica, Arial, sans-serif;font-size:20px;background-color:rgb(0,0,0,0.8);display:inline-block;padding:5px;}	
+
+  @keyframes yourAnimation{
+    0%{
+        transform: rotate(0) translateX(-50%);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0) translateX(0);
+        opacity: 1;
+        }
+}
+
+.carousel-caption{
+    animation: yourAnimation 3s forwards 0s linear;
+	margin-bottom:100px;
+}
+  
+
+
+
+
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #BA0707;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #BA0707;
+}
+
+body {
+ 
+   
+ 
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+}
+
+nav {
+    display: block;
+    background: #374147;
+}
+
+.menu {
+    display: block;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+.menu li a {
+    font-weight: 600;
+    text-decoration: none;
+    padding: 20px 15px;
+    display: block;
+    color: #fff;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.menu li a:hover,.menu li:hover>a {
+    color: #fff;
+    background: #9ca3da;
+}
+
+.menu ul {
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    width: 170px;
+    position: absolute;
+    left: 0px;
+    background: #fff;
+    z-index: 99;
+    transform: translate(0,20px);
+    transition: all 0.2s ease-out;
+}
+
+.menu ul:after {
+    bottom: 100%;
+    left: 20%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 6px;
+    margin-left: -6px;
+}
+
+.menu ul li {
+    display: block;
+    float: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+    color: #797979;
+    background: #fff;
+}
+
+.menu ul li a:hover,.menu ul li:hover>a {
+    background: #9ca3da;
+    color: #fff;
+}
+
+.menu li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.menu ul ul {
+    left: 169px;
+    top: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(20px,20px);
+    transition: all 0.2s ease-out;
+}
+
+.menu ul ul:after {
+    left: -6px;
+    top: 10%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 6px;
+    margin-top: -6px;
+}
+
+.menu li>ul ul:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.responsive-menu {
+    display: none;
+    width: 100%;
+    padding: 20px 15px;
+    background: #374147;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.responsive-menu:hover {
+    background: #374147;
+    color: #fff;
+    text-decoration: none;
+}
+
+a.homer {
+    background: #9ca3da;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    
+
+
+
+
+    .mainWrap {
+        width: 768px;
+    }
+
+    .menu ul {
+        top: 37px;
+    }
+
+    .menu li a {
+        font-size: 12px;
+    }
+
+    a.homer {
+        background: #374147;
+    }
+	
+	
+}
+
+@media (max-width: 767px) {
+    .mainWrap {
+        width: auto;
+        padding: 50px 20px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .responsive-menu {
+        display: block;
+    }
+
+    nav {
+        margin: 0;
+        background: none;
+    }
+
+    .menu li {
+        display: block;
+        margin: 0;
+    }
+
+    .menu li a {
+        background: #fff;
+        color: #797979;
+    }
+
+    .menu li a:hover,.menu li:hover>a {
+        background: #9ca3da;
+        color: #fff;
+    }
+
+    .menu ul {
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: initial;
+    }
+
+    .menu li:hover>ul {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        transform: initial;
+    }
+
+    .menu ul ul {
+        left: 0;
+        transform: initial;
+    }
+
+    .menu li>ul ul:hover {
+        transform: initial;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+
+
+
+
+}
+
+@media (max-width: 320px) {
+}
+
+</style>
+<body>
+
+   <div style="position: fixed; height: 100%;width: 100%;top: 0;left: 0;background: #fff;z-index: 99999;" class="loader">
+     <img id="loader" src="img/logo.png">
+   </div>
+
+ 
+	
+     <nav style="background-color:white;" class="topnav navbar navbar-expand-md ">
+  <!-- Brand -->
+  <a class="brand" class="navbar-brand" href="#"><img height="100px" width="100px" src="img/logo.png"></a>
+
+
+    <ul class="navbar-nav">
+        <li style="color:black;font-size:28px;font-family: Times New Roman;background-color:white;font-weight:bolder" class="nav-item dropdown">
+          AL-HIKMA FOUNDATION
+      </li>
+	
+	
+	
+	
+	
+	
+	</ul>
+ 
+ 
+</nav>
+
+
+
+ 
+
+   <nav>
+<a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder"></i> Menu</a>    
+   <ul class="menu">
+   <li><a class="homer" href="#">HOME</a>
+  
+   </li>
+  <li><a  href="#">ABOUT</a></li>
+  <li><a  href="#">FEE STRUCTURE</a>
+  <ul class="sub-menu">
+   <li><a href="fee_structure.html">NURSERY & PRIMARY</a></li>
+   <li><a href="#">SECONDARY</a></li>
+   </li>
+   </ul>
+  </li>
+  <li><a  href="#">ONLINE APPLICATION</a>
+   <ul class="sub-menu">
+   <li><a href="connect.php">APPLY FOR NURSERY</a></li>
+   <li><a href="#">APPLY FOR PRIMARY</a></li>
+     <li><a href="#">APPLY FOR SECONDARY</a> </li>
+   </ul>
+  </li>
+  <li><a  href="#"> CONTACT US</a></li>
+  <li><a  href="#">AL-HIKMA QUR'AN COMPETITION</a></li>
+  
+  </ul>
+  </nav>
+
+
+
+
+
+<div class="container-fluid remove-nav">
+ 	<div class="row">
+		<div class="col-md-8" style="padding:0px;">
+		 <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img" src="Boys/img.jpg" style='height: 100%; width: 100%; object-fit: cover; max-width: 100%; max-height: 100%;'  alt="Los Angeles">
+	  <div class="carousel-caption">
+    <h3>WELCOME TO KATAVI INSTITUTE</h3>
+    <p>FOR QUALITY EDUCATION</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="img" src="Girls/img2.jpg" style='height: 100%; width: 100%; object-fit: cover; max-width: 100%; max-height: 100%;'  alt="Chicago" >
+	  <div class="carousel-caption">
+    <h3>Good learning environment</h3>
+    <p>To initiate your understanding</p>
+  </div>
+    </div>
+	
+	    <div class="carousel-item">
+      <img class="img" src="Boys/img3.jpg" style='height: 100%; width: 100%; object-fit: cover; max-width: 100%; max-height: 100%;'  alt="Chicago" >
+	  <div class="carousel-caption">
+    <h3>Good learning environment</h3>
+    <p>To initiate your understanding</p>
+  </div>
+    </div>
+   
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+		</div>
+		<div style="height:500px" class="col-md-4 news" style="padding:0px;">
+		  <div style="font-family: 'Francois One', Helvetica, Arial, sans-serif;background-color:rgb(14, 230, 222);color:white;padding:10px;" class="col-sm-12">
+			  <h5>NEWS & ANNOUNCEMENTS</h5>
+			</div>
+	       <div style="border:2px solid #0ee6de;background-color:white;" class="col-sm-12">
+		   <table class="table table-hover">
+  
+  <tbody>
+
+    <tr>
+   
+      <td>TANGAZO LA KUFUNGUA SHULE <span><img height="40px" width="40px" src="img/new.gif"/></span></td>
+     
+    </tr>
+	
+	<tr>
+   
+      <td>TAHADHARI YA COVID - 19 <span><img height="40px" width="40px" src="img/new.gif"/></span></td>
+     
+    </tr>
+   
+  </tbody>
+</table>
+			</div>
+			
+			
+			
+			 <div style="font-family: 'Francois One', Helvetica, Arial, sans-serif;background-color:rgb(14, 230, 222);color:white;padding:10px;" class="col-sm-12">
+			  <h5>APPLICATION FORMS</h5>
+			</div>
+	       <div style="border:2px solid #0ee6de;background-color:white;" class="col-sm-12">
+		   <table class="table table-hover">
+  
+  <tbody>
+    <tr>
+   
+     
+      <td class="form">APPLICATION FORM - NURSERY</td>
+    </tr>
+    <tr>
+   
+      <td>APPLICATION FORM - PRIMARY</td>
+     
+    </tr>
+	
+	<tr>
+   
+      <td>APPLICATION FORM - SECONDARY (BOYS)</td>
+     
+    </tr>
+	
+	<tr>
+   
+      <td>APPLICATION FORM - SECONDARY (GIRLS)</td>
+     
+    </tr>
+   
+  </tbody>
+</table>
+			</div>
+		</div>
+		</div>
+
+<div style="text-align:center;" class="row">
+	<div id="aboutbtn" class="col switchbtn1">
+	 <p>About us</p>
+	</div>
+	
+	<div id="missionbtn" class="col switchbtn2">
+	 <p>Our mission</p>
+	</div>
+	
+	
+	
+	</div>
+
+
+ <div class="row">
+	<div id="about" class="about col-12">
+	 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero justo laoreet sit amet cursus sit amet dictum. Id leo in vitae turpis massa sed. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod.</p>
+	</div>
+	
+	<div id="mission" class="about col-12">
+	 <p>Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Aliquet enim tortor at auctor urna. Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies. </p>
+	</div>
+	
+	
+	
+	</div>
+	
+	
+<div class="row">
+  <div   class="parallax parallax-capt col-12">
+  
+	  <p>AL-HIKMA NURSERY</p>
+
+   
+  </div>
+  <div class="about col-12">
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero justo laoreet sit amet cursus sit amet dictum. Id leo in vitae turpis massa sed. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod.</p>
+
+  </div>
+  
+  
+
+</div>
+
+<div class="row">
+  <div class="parallax2 parallax-capt col-12">
+      <p>AL-HIKMA GIRLS</p>
+  </div>
+  <div class="about col-12">
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero justo laoreet sit amet cursus sit amet dictum. Id leo in vitae turpis massa sed. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod.</p>
+
+   
+   
+  </div>
+</div>	
+
+
+<div class="row">
+  <div  class="parallax3 parallax-capt col-12">
+     <p>AL-HIKMA BOYS</p>
+  </div>
+  <div class="about col-12">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero justo laoreet sit amet cursus sit amet dictum. Id leo in vitae turpis massa sed. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod.</p>
+      
+  </div>
+</div>	
+
+
+<div class="row">
+	       <div style="text-align:center;padding:20px 0;" class="col-12">
+		  <h3 style="font-family: 'Francois One', Helvetica, Arial, sans-serif;color:#000;text-shadow: 0px 5px 10px #fff;font-weight:bolder;">GALLERY</h3>
+		</div>
+	   </div>
+  
+
+
+ 
+
+
+
+	<div class="row">
+		<div class="col" style="padding:0px;">
+		 <div id="gallery" class="carousel slide carousel-fade" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#gallery" data-slide-to="0" class="active"></li>
+    <li data-target="#gallery" data-slide-to="1"></li>
+    <li data-target="#gallery" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img" src="Boys/img.jpg" style='height: 100%; width: 100%; object-fit: cover; max-width: 100%; max-height: 100%;'  alt="Los Angeles">
+	  
+    </div>
+    <div class="carousel-item">
+      <img class="img" src="Girls/img2.jpg" style='height: 100%; width: 100%; object-fit: cover; max-width: 100%; max-height: 100%;'  alt="Chicago" >
+	 
+    </div>
+	
+	 <div class="carousel-item">
+      <img class="img" src="Boys/img3.jpg" style='height: 100%; width: 100%; object-fit: cover; max-width: 100%; max-height: 100%;'  alt="Chicago" >
+	  
+    </div>
+   
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#gallery" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#gallery" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+		</div>
+	
+		
+		  
+	</div>
+
+
+
+
+ <div class="row">
+	       <div style="text-align:center;padding:20px 0;" class="col-12">
+		  <h3 style="font-family: 'Francois One', Helvetica, Arial, sans-serif;color:#000;text-shadow: 0px 5px 10px #fff;font-weight:bolder;">CONTACT US</h3>
+		</div>
+	   </div>
+	   
+	<div class="row">
+	       <div  class="col-md contact">
+		  <h5>+255 657 883 255</h5>
+		</div>
+		
+		<div  class="col-md contact">
+		  <h5>alhikmaschool@outlook.com</h5>
+		</div>
+		
+		<div class="col-md contact">
+		  <h5>P.O BOX 45332, DAR ES SALAAM</h5>
+		</div>
+		
+	   </div>   
+	   
+	   
+	   <div style="padding:20px 0;" class="row foot">
+	      <div class="col footer">
+		     <ul>
+			  <li><a href="#">Fee structure</a></li>
+			  <li><a href="#">Online application</a></li>
+			  <li><a href="#">Admission requirements</a></li>
+			 </ul>
+		  </div>
+		 </div>   
+	   
+	   
+	   
+
+
+
+
+
+
+
+
+<div  class=" row feedback2">
+    <a href="index1.html">QUR'AN COMPETITION</a>
+</div>
+
+
+<div class="row">
+<div style="text-align:center;font-size:30px;" class="col">
+<i class="fa fa-chevron-up"></i>
+</div>
+
+</div>
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+</div>
+
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+     $(document).ready(function(){ 
+	var touch 	= $('#resp-menu');
+	var menu 	= $('.menu');
+ 
+	$(touch).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+	
+	$(window).resize(function(){
+		var w = $(window).width();
+		if(w > 767 && menu.is(':hidden')) {
+			menu.removeAttr('style');
+		}
+	});
+	
+});
+    </script>
+	
+	
+
+
+	
+
+<script>
+$(document).ready(function(){
+    $('.autoplay').slick({
+        slidesToShow: 1, // 3,
+        slidesToScroll: 1,
+        dots: false,
+        centerMode: false,
+		autoplay: true,
+		autoplaySpeed:10000,
+        focusOnSelect: true,
+		 nextArrow: '.next',
+        prevArrow: '.previous'
+    });
+});
+				
+</script>
+
+
+
+
+<script>
+    gsap.to(".feedback", {duration: 2, x:350,yoyo:true,repeat:-1,repeatDelay:13,delay:5,ease: "power4.out",});
+  
+</script>
+
+
+<script>
+$("#aboutdropdown").hover(function(){
+  $(".nav-dropdown-container").show();
+   $("#collapsibleNavbar").hide();
+  $("#quaran,#competitions").css("display","none");
+  $("#about").show();
+  });
+  
+$("#quarandropdown").hover(function(){
+  $(".nav-dropdown-container").show();
+   $("#collapsibleNavbar").hide();
+  $("#about,#competitions").css("display","none");
+  $("#quaran").show();
+  });
+  
+  
+ $("#competitionsdropdown").hover(function(){
+  $(".nav-dropdown-container").show();
+   $("#collapsibleNavbar").hide();
+  $("#about,#quaran").css("display","none");
+  $("#competitions").show();
+  });
+
+
+
+  
+   $(".remove-nav,#home,#contact,#news").hover(function (){
+   $(".nav-dropdown-container").slideUp(500);
+  
+  });
+  
+  
+$(".delete").click(function(){
+	 $("#about,#competitions,#quaran").slideUp(1000);
+  });
+  
+  
+  $(".navbar-toggler").click(function(){
+    $("#collapsibleNavbar").slideToggle();
+  });
+
+
+
+
+</script>
+
+
+<script>
+$(document).ready(function () {
+    $('.slider-nav').slick({
+        slidesToShow: 4, // 3,
+        slidesToScroll: 1,
+        dots: false,
+        centerMode: false,
+		autoplay: true,
+		 nextArrow: '.mbele',
+        prevArrow: '.nyuma',
+        focusOnSelect: true,
+		responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+    });
+   
+});    	
+</script>
+
+
+
+
+<script>
+$('body').append($('<span class="ripple"></span>'));
+
+$(document).on('click', function(e){
+  var xPos = e.clientX,
+      yPos = e.clientY;
+  $('.ripple').css({
+    top: yPos-30,
+    left: xPos-30
+  }).addClass('active');
+});
+
+$(".ripple").on('animationend webkitAnimationEnd oAnimationEnd oanimationend MSAnimationEnd', 
+function() {
+ $('.ripple').removeClass('active');
+});  
+</script>
+
+<script>
+  $(document).ready(function(){
+ $(".sitelink").on('click',function(){
+   window.location='index1.html';
+ });
+ });
+</script>
+
+
+<script>
+  $(document).ready(function(){
+ $("#missionbtn").on('click',function(){
+   $("#mission").show();
+   $("#about").hide();
+   $("#aboutbtn").css('background-color','#0ee6de');
+     $("#missionbtn").css('background-color','#fff');
+   
+ });
+ 
+ $("#aboutbtn").on('click',function(){
+   $("#about").show();
+   $("#mission").hide();
+     $("#missionbtn").css('background-color','#0ee6de');
+      $("#aboutbtn").css('background-color','#fff');
+ });
+ 
+ 
+ 
+ });
+</script>
+
+
+
+<script>
+  $(document).ready(function(){
+    $('.slide-for').slick({
+        slidesToShow: 1, // 3,
+        slidesToScroll: 1,
+        dots: false,
+        centerMode: false,
+		autoplay: false,
+        focusOnSelect: true,
+		 nextArrow: '.forward',
+        prevArrow: '.back',
+	
+		
+    });
+	$('.slide-nav').slick({
+   slidesToShow: 5,
+   slidesToScroll: 1,
+   asNavFor: '.slide-for',
+   dots: true,
+   focusOnSelect: true,
+   responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+ });
+});
+</script>
+
+<script>
+$(window).on('load', function () {
+  setTimeout(function() { 
+      $(".loader").fadeOut(); 
+    }, 7000);
+});
+</script>
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+</body>
+</html>
