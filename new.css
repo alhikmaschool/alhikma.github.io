@@ -225,10 +225,10 @@ html {
 
 
 @keyframes parallax2 {
-  0%   { background-image:url("img/girls.jpg");}
-  50%   { background-image:url("img/girls.jpg");}
-  75%   { background-image:url("img/girls2.jpg");}
-  100% {background-image:url("img/girls2.jpg");}
+  0%   { background-image:url("img/girls.JPG");}
+  50%   { background-image:url("img/girls.JPG");}
+  75%   { background-image:url("img/girls2.JPG");}
+  100% {background-image:url("img/girls2.JPG");}
 }
 
 
@@ -253,12 +253,10 @@ html {
 }
 
 @keyframes parallax3 {
-   0%   {background-image:url("img/boys.jpg");}
-  20%   { background-image:url("img/boys.jpg");}
-  40%   { background-image:url("img/boys2.jpg");}
-  60% {background-image:url("img/boys2.jpg");}
-  80% {background-image:url("img/boys3.jpg");}
-  100% {background-image:url("img/boys3.jpg");}
+  0%   { background-image:url("img/boys.JPG");}
+  50%   { background-image:url("img/boys.JPG");}
+  75%   { background-image:url("img/boys2.JPG");}
+  100% {background-image:url("img/boys2.JPG");}
 }
 
 
